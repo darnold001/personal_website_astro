@@ -1,0 +1,39 @@
+---
+import NavHeader from "../components/NavHeader";
+import Footer from "../components/Footer";
+import Styles from "../styles/App.scss";
+import {TabWrapper} from "../components/TabWrapper";
+import {Toolbox} from '../components/Toolbox'
+import {About} from '../components/About'
+import { TabLabels } from "../constants";
+import AboutText from "../components/AboutText.astro";
+---
+
+<!-- TODO: Refactor to use Nanos and slots -->
+<html lang="en">
+    <head>
+        <NavHeader />
+    </head>
+    <body>
+        <main>
+            <TabWrapper tabLabels={TabLabels} client:load/>
+            <Toolbox client:load/>
+            <About client:load>
+                <AboutText/>
+            </About>
+            <!-- <AboutPage client:load/> -->
+        </main>
+        <style>
+            main {
+                margin: auto;
+                padding: 1em;
+                display: flex;
+                flex-direction: column;
+                /* justify-content: space-between; */
+                height: 78vh;
+                overflow-y: scroll;
+            }
+        </style>
+    </body>
+    <Footer />
+</html>
