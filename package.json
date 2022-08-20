@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@nanostores/react": "^0.3.0",
-    "react-hamburger-menu": "^1.2.1"
+    "react-hamburger-menu": "^1.2.1",
+    "sass": "^1.54.5"
   }
 }
