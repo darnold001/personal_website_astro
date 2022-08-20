@@ -1,7 +1,7 @@
 ---
-import { LandingIntro } from "../components/LandingIntro";
-import NavHeader from "../components/NavHeader";
-import Footer from "../components/Footer";
+import TypeWriter from '../components/TypeWriter'
+import { TextButton } from "../components/TextButton";
+import { typeWriterMessages, LARGE_LOGO_White } from '../constants.js'
 import Styles from "../styles/App.scss";
 ---
 
@@ -9,7 +9,17 @@ import Styles from "../styles/App.scss";
   <head> </head>
   <body>
     <main>
-      <LandingIntro client:visible />
+      <div class='welcome-wrapper'>
+        <img
+            class="welcome-logo"
+            src={LARGE_LOGO_White}
+            alt="DA Logo"
+        />
+        <TypeWriter messages={typeWriterMessages} />
+        <div class="learn-more">
+            <TextButton text={"Learn More"} link={"/about"} />
+        </div>
+    </div>
     </main>
     <style>
       main {
