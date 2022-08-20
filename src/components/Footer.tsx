@@ -7,12 +7,11 @@ import {
     INSTAGRAM_White,
     LINKEDIN_Black,
     LINKEDIN_White,
-} from "../constants.tsx";
-import type { FC } from 'react'
+} from "../constants";
 // import { useThemeContext } from "./themeContext";
 
-const Footer: FC = () => (
-    <footer className="nav-footer">
+function Footer() {
+    return <footer className="nav-footer">
         <a
             target="_blank"
             rel="noreferrer"
@@ -54,7 +53,7 @@ const Footer: FC = () => (
             />
         </a>
     </footer>
-);
+};
 
 
 export default Footer;

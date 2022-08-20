@@ -1,0 +1,28 @@
+---
+import NavHeader from "../components/NavHeader";
+import Footer from "../components/Footer";
+import Styles from "../styles/App.scss";
+---
+
+<html lang="en">
+    <head>
+        <NavHeader client:load/>
+    </head>
+    <body>
+        <main>
+            <h1>Projects</h1>
+        </main>
+        <style>
+            main {
+                margin: auto;
+                padding: 1em;
+                max-width: 60ch;
+                /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+                height: 76vh;
+            }
+        </style>
+    </body>
+    <Footer />
+</html>

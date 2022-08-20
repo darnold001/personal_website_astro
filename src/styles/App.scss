@@ -21,7 +21,8 @@ p {
 }
 
 .header-wrapper {
-  width: 100vw;
+  padding: 0 1vw;
+  width: 96vw;
   color: white;
   display: flex;
   flex-direction: row;
@@ -115,11 +116,12 @@ p {
   position: absolute;
   right: 68px;
   width: 80%;
-  max-width: 27rem;
+  max-width: 26rem;
   background-color: black;
   height: 2.5rem;
   padding-top: 40px;
   transition: width 2s;
+  // grid-template-columns: 25% 25% 25% 25%;
   grid-template-columns: 33% 33% 33%;
   display: grid;
 }
@@ -134,9 +136,7 @@ p {
   overflow: hidden;
 }
 
-.nav-menu {
-  right: 0px;
-}
+
 
 .header-logo {
   left: 0px;
@@ -163,15 +163,13 @@ p {
   margin-left: 2rem;
   margin-top: 2.2rem;
   float: left;
-  /* opacity: 40% !important; */
 }
 
 .nav-menu-hamburger {
-  /* position: absolute; */
   float: right;
   right: 0px;
-  width: 60px;
-  margin-top: 2.75rem;
+  margin-top: 2rem;
+  padding: 10px;
 }
 
 .contact-form input,
@@ -928,23 +926,112 @@ div.carosel-image {
   }
 }
 
-.toolboxSection {
-  color: white;
+
+.toolbox{
+  margin: 4% 10%;
   display: flex;
-  flex-flow: row wrap;
-  align-self: auto;
+  flex-wrap: wrap;
+  background-color: hwb(0deg 12% 88% / 32%);
+border-radius: 5px;
+height: 60vh;
+overflow-y: scroll;
+filter: grayscale(.8);
+}
+
+.toolbox:hover{
+  filter:none;
+
+}
+
+.toolSection{
+  color: black;
+  display: contents;
+}
+
+.toolSection:hover{
+  color: white;
 }
 
 .toolCard{
   margin: 2%;
-  border: 1px solid grey;
   border-radius: 4px;
   padding: 10px;
-  opacity: 30;
-  background-color: #c7c4c432;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  // filter: grayscale(black);
 }
 
-.sectionTitle {
+.toolSection a{
+  text-decoration: none;
+
+}
+
+.toolCard:hover{
+  background-color: #c7c4c45e;
   color: white;
+  // filter: none;
+
+}
+
+.toolCard h3{
+  color: black;
+  visibility: hidden;
+}
+
+.toolCard:hover h3{
+  color: white;
+visibility: visible;}
+
+.sectionTitle {
   text-align: center;
 }
+
+.toolboxTitle{
+  margin-left: 10vw;
+}
+
+.contactWrapper{
+  margin-top: 4vh;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding:  2vh 4vw 4vh 4vw;
+  background-color: hwb(0deg 12% 88%/32%);
+}
+
+.contactWrapper label{
+  color: white;
+  padding-top: 3vh;
+  text-align: left;
+}
+.contactWrapper input{
+  height: 2em;
+
+}
+
+.contactWrapper textarea{
+  height: 4em;
+
+}
+
+.contactWrapper input, .contactWrapper textarea{
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  color: white;
+  margin: 1vh 0 2vh 0 ;
+}
+
+.contactWrapper .submitButton{
+ height: 6vh;
+ font-size:1.2rem;
+ font-family: "Source";
+}
+
+.contactWrapper .submitButton:hover{
+background-color: white;
+color: black;
+cursor: pointer;
+ }

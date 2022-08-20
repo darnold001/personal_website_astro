@@ -1,22 +1,18 @@
 
-import { ActiveTab } from "../pages/stores/tabs"
-import { useStore } from '@nanostores/react'
 import { ToolCard } from "./ToolCard";
 import { Tools } from "../constants";
+import { useMemo } from "react";
 
-export interface IToolObj { icon: string; name: string }
+export interface IToolObj { icon: string; name: string, link: string }
 
 export function Toolbox() {
 
-    const $currentTab = useStore(ActiveTab);
+const sortedTools = useMemo(() =>Tools.sort(((a,b) => a.name > b.name ? 1: -1)),[Tools])
 
-
-    return <div hidden={$currentTab !== 'Toolbox'}>
-        {Tools.map((section) => <div key={section.sectionTitle} >
-            <h2 className="sectionTitle">{section.sectionTitle}</h2>
-            <div className='toolboxSection'>
-                {section.tools.map(tool => <ToolCard key={tool.name} tool={tool} />)}
-            </div>
-        </div>)}
+    return <div>
+        <h1 className="toolboxTitle">Some of my current Toolbox includes: </h1>
+        <div className='toolbox'>
+            {sortedTools.map(tool => <ToolCard key={tool.name} tool={tool}  />)}
+        </div>
     </div>
 }

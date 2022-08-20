@@ -1,7 +1,8 @@
 import { LOGO_URL_Black, LOGO_URL_White } from "../constants";
+import Navigation from "./Navigation";
 import type { FC } from 'react'
 
-const NavHeader: FC = () => {
+function NavHeader (){
     return (
         <div className="header-wrapper">
             <div className="header-logo">
@@ -10,6 +11,7 @@ const NavHeader: FC = () => {
                     alt="Devin Arnold Logo"
                 />
             </div>
+            <Navigation/>
         </div>
     );
 };

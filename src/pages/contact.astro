@@ -1,29 +1,39 @@
 ---
-import { LandingIntro } from "../components/LandingIntro";
 import NavHeader from "../components/NavHeader";
 import Footer from "../components/Footer";
-
+import ContactForm from "../components/ContactForm";
 import Styles from "../styles/App.scss";
 ---
 
 <html lang="en">
     <head>
-        <NavHeader />
+        <NavHeader client:load />
     </head>
     <body>
         <main>
-            <h1>Contact form</h1>
+            <div class="contactWrapper">
+                <h1>Contact form</h1>
+                <ContactForm client:load>
+                    <label for="name"> What's your name?</label><br />
+                    <input id="name" type="text" /><br />
+                    <label for="email"> What's your email?</label><br />
+                    <input id="email" type="email" /><br />
+                    <label for="phone"> What's your phone number?</label><br />
+                    <input id="phone" type="telephone" /><br />
+                    <label for="message"> What would you like to say?</label><br/>
+                    <textarea id="message"></textarea><br />
+                    <input class='submitButton' type="submit" />
+                </ContactForm>
+            </div>
         </main>
         <style>
-            main {
+            /* main {
                 margin: auto;
                 padding: 1em;
                 max-width: 60ch;
-                /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-                height: 85vh;
-            }
+                height: 80vh;
+            } */
         </style>
     </body>
+    <Footer />
 </html>

@@ -8,10 +8,8 @@ export const LandingIntro = () => (
             src={LARGE_LOGO_White}
             alt="DA Logo"
         />
-        {/* <h1> A little about me...</h1> */}
         <TypeWriter messages={typeWriterMessages} />
         <div className="learn-more">
-            test
             <TextButton text={"Learn More"} link={"/about"} />
         </div>
     </div>
