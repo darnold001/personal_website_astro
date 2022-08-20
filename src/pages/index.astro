@@ -15,7 +15,7 @@ import Styles from "../styles/App.scss";
             src={LARGE_LOGO_White}
             alt="DA Logo"
         />
-        <TypeWriter messages={typeWriterMessages} />
+        <TypeWriter messages={typeWriterMessages} client:load/>
         <div class="learn-more">
             <TextButton text={"Learn More"} link={"/about"} />
         </div>
