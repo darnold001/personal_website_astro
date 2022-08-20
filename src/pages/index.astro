@@ -1,0 +1,24 @@
+---
+import { LandingIntro } from "../components/LandingIntro";
+import NavHeader from "../components/NavHeader";
+import Footer from "../components/Footer";
+import Styles from "../styles/App.scss";
+---
+
+<html lang="en">
+  <head> </head>
+  <body>
+    <main>
+      <LandingIntro client:visible />
+    </main>
+    <style>
+      main {
+        text-align: center;
+        margin: auto;
+        padding: 1em;
+        max-width: 60ch;
+        height: 85vh;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+---
+import { LandingIntro } from "../components/LandingIntro";
+import NavHeader from "../components/NavHeader";
+import Footer from "../components/Footer";
+import {Toolbox} from '../components/Toolbox'
+import Styles from "../styles/App.scss";
+---
+
+<html lang="en">
+    <head>
+        <NavHeader client:load/>
+    </head>
+    <body>
+        <main>
+            <Toolbox client:load/>
+        </main>
+        <style>
+            main {
+                margin: auto;
+                padding: 1em;
+                height: 78vh;
+            }
+        </style>
+    </body>
+    <Footer />
+</html>
