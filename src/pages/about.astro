@@ -2,12 +2,13 @@
 import NavHeader from "../components/NavHeader";
 import Footer from "../components/Footer";
 import Styles from "../styles/App.scss";
+
 ---
 
 <!-- TODO: Refactor to use Nanos and slots -->
 <html lang="en">
     <head>
-        <NavHeader client:load />
+        <NavHeader client:load currentUrl={Astro.url.pathname}/>
     </head>
     <body>
         <main>

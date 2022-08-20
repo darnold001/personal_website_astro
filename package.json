@@ -12,14 +12,12 @@
   "devDependencies": {
     "@astrojs/react": "^1.0.0",
     "@types/react": "^18.0.17",
-    "@types/react-hamburger-menu": "^0.0.4",
     "astro": "^1.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@nanostores/react": "^0.3.0",
-    "react-hamburger-menu": "^1.2.1",
     "sass": "^1.54.5"
   }
 }
